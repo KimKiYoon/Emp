@@ -7,6 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+<div id="display"></div>
 </body>
 </html>
