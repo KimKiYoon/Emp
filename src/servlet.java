@@ -1,8 +1,5 @@
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 import javax.servlet.ServletException;
@@ -71,14 +68,16 @@ public class servlet extends HttpServlet {
 			
 			int result=dao.doUpdate(empno, ename, job, mgr, hiredate, sal, comm, deptno);
 			
-			//디스패쳐/or js 경고창 처리
+			//디스패쳐로 update.jsp에 출력 or js 경고창 처리 후 메인페이지로 돌아가기
 			if (result!=0){
 				out.println("<script>");
 				out.println("alert('업데이트 성공!')");
+				out.println("location.href='index.jsp'");
 				out.println("</script>");
 			} else {
 				out.println("<script>");
 				out.println("alert('실패!')");
+				out.println("location.href='index.jsp'");
 				out.println("</script>");
 			}
 		} else if (cmd.equals("delete")){
