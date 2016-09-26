@@ -1,7 +1,7 @@
 
 public class dto {
 	private int empno;
-	private String dname;
+	private String ename;
 	private String job;
 	private int mgr;
 	private String hiredate;
@@ -14,11 +14,11 @@ public class dto {
 	public void setEmpno(int empno) {
 		this.empno = empno;
 	}
-	public String getDname() {
-		return dname;
+	public String getEname() {
+		return ename;
 	}
-	public void setDname(String dname) {
-		this.dname = dname;
+	public void setEname(String dname) {
+		this.ename = dname;
 	}
 	public String getJob() {
 		return job;
