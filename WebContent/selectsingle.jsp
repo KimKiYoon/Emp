@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix ="c" uri = "http://java.sun.com/jsp/jstl/core" %>
+
+<c:set var = "singlerow" value = "${requestScope.singlerow}" />
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,7 +10,17 @@
 <title>Insert title here</title>
 </head>
 <body>
-<form name="insert" action="servlet" method="post"> 
+<script src="http://code.jquery.com/jquery-2.1.1.js"></script>
+<script type="text/javascript">
+$(function(){
+	$('#delete').click(function() {
+	location.href="servlet?cmd=delete&empno="+${singlerow.empno};
+	})
+})
+</script>
+
+<div style="margin-top:70px;"></div> 
+<form name="insert" action="servlet?cmd=update" method="post"> 
  <div align="center"> 
     <table width="600" border="0" cellpadding="7" > 
         <tr align="center" bgcolor="yellow" height="50"> 
@@ -78,14 +91,18 @@
               <b>부서번호</b>
            </td>
            <td>
-              <input type="text" size="40" name="deptno" id="deptno" maxlength="10" value = "${singlerow.deptno}" readonly>
+              <input type="text" size="40" name="deptno" id="deptno" maxlength="10" value = "${singlerow.deptno}" >
            </td>
         </tr>
         <tr bgcolor="yellow">    
         <td colspan="2" align="center" class="c2">           
-             <input type = "button" value = "수정하기" id = "update">
+             <input type = "submit" value = "수정하기" id = "update" >
+         <input type = "button" value = "삭제하기" id = "delete">
           </td>
         </tr>
     </table>
+   </div>
+</form>    
+
 </body>
 </html>

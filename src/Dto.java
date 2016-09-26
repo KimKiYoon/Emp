@@ -1,24 +1,39 @@
 
-public class dto {
+public class Dto {
 	private int empno;
-	private String dname;
+	private String ename;
 	private String job;
 	private int mgr;
 	private String hiredate;
 	private int sal;
 	private int comm;
 	private int deptno;
+	public Dto() {
+	// TODO Auto-generated constructor stub
+	}
+	
+	public Dto(int empno, String ename, String job, int mgr, String hiredate, int sal, int comm, int deptno) {
+		this.empno = empno;
+		this.ename = ename;
+		this.job = job;
+		this.mgr = mgr;
+		this.hiredate = hiredate;
+		this.sal = sal;
+		this.comm = comm;
+		this.deptno = deptno;
+	}
+
 	public int getEmpno() {
 		return empno;
 	}
 	public void setEmpno(int empno) {
 		this.empno = empno;
 	}
-	public String getDname() {
-		return dname;
+	public String getEname() {
+		return ename;
 	}
-	public void setDname(String dname) {
-		this.dname = dname;
+	public void setEname(String ename) {
+		this.ename = ename;
 	}
 	public String getJob() {
 		return job;
