@@ -23,6 +23,7 @@
 <title>Insert title here</title>
 </head>
 <body>
+<div><br></div>
 <div id="main" style="width: 600px;" class="container">
 	<table id="allTable" class="table table-striped">
 		<tr><th>사원번호</th><th>이름</th></tr>
@@ -35,7 +36,9 @@
 	 </c:forEach>
 	</table>
 	
-	<input type="button" value="추가" id="butt">
+	<input type="button" value="사원추가" id="butt" class="btn btn-primary btn-block">
+	<br>
+	<br>
 </div>
 </body>
 </html>

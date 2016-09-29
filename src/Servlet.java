@@ -13,10 +13,10 @@ import javax.servlet.http.HttpServletResponse;
 
 
 @WebServlet({"/servlet","/Servlet"})
-public class servlet extends HttpServlet {
+public class Servlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
    
-    public servlet() {
+    public Servlet() {
         super();
         
     }
@@ -32,7 +32,7 @@ public class servlet extends HttpServlet {
 	    request.setCharacterEncoding("UTF-8"); 
 	    response.setContentType("text/html;charset=UTF-8");
 		String cmd = request.getParameter("cmd");
-	     PrintWriter out=response.getWriter();
+	    PrintWriter out=response.getWriter();
 	  	Dao dao = new Dao();
 	
 		ArrayList<Dto> list;   
